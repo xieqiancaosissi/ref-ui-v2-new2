@@ -1,0 +1,84 @@
+.poolContainer {
+  @apply lg:frcc xsm:fccc lg:w-[1104px] xsm:w-full lg:h-15 xsm:min-h-15 mt-3 rounded-lg lg:px-3 text-white text-sm font-medium;
+}
+.notfarm {
+  background: rgba(33, 43, 53, 0.3);
+}
+
+@media (min-width: 1025px) {
+  .isfarm {
+    background: radial-gradient(
+      24.64% 177.05% at 11.82% 0%,
+      rgba(250, 255, 0, 0.21) 0%,
+      rgba(33, 43, 53, 0.09) 80.5%
+    );
+  }
+}
+
+@media (max-width: 1024px) {
+  .isfarm {
+    background: radial-gradient(
+      60% 107.05% at 86.82% 0%,
+      rgba(250, 255, 0, 0.2) 0%,
+      rgba(18, 29, 38, 0.2) 80.5%
+    );
+  }
+}
+
+/* .poolContainer > div:first-child {
+  @apply lg:w-109;
+}
+
+.poolContainer > div:last-child {
+  @apply lg:frc lg:flex-1 lg:justify-around xsm:flex xsm:flex-col xsm:p-3 xsm:w-full;
+}
+
+.poolContainer > div:last-child > div {
+  @apply lg:min-w-40 lg:fccc xsm:flex xsm:items-center xsm:justify-between;
+} */
+
+.pcdiv1 {
+  @apply w-109 xsm:hidden;
+}
+
+.pcdiv2 {
+  @apply frc flex-1 justify-around xsm:hidden;
+}
+
+.poolContainer > .pcdiv2 > div {
+  @apply min-w-40 fccc;
+}
+
+.mobilediv1 {
+  @apply lg:hidden;
+}
+
+.mobilediv2 {
+  @apply xsm:flex xsm:flex-col xsm:p-3 xsm:w-full lg:hidden;
+}
+
+.mobilediv2 > div {
+  @apply xsm:flex xsm:items-center xsm:justify-between;
+}
+
+.tokenImgContainer {
+  @apply flex items-center;
+}
+
+.tokenImgContainer img {
+  width: 26px;
+  height: 26px;
+  @apply rounded-full border border-dark-40;
+}
+
+.tokenImgContainer > :last-child {
+  transform: translateX(-4px);
+}
+
+.symbol {
+  @apply text-base text-white font-medium lg:px-2;
+}
+
+.tagPublicStyle {
+  @apply frcc text-xs italic w-13 h-5 rounded-xl;
+}

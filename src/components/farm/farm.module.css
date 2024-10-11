@@ -1,0 +1,109 @@
+/* farm */
+.gradient_border_container {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 20px;
+  width: 137px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gradient_border_container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px;
+  padding: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 247, 45, 0.3) 0%,
+    rgba(158, 255, 0, 0.3) 100%
+  );
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+}
+
+.farmEnded {
+  background-color: #0c171f;
+  opacity: 0.6;
+}
+.farmEnded .border-gradientFromHover {
+  border-color: #73818b;
+}
+.farmEnded .border-gradientFrom {
+  border-color: #73818b;
+}
+
+.farmEnded .text-white {
+  color: #73818b;
+}
+.farmEnded .dclIcon.text-white {
+  color: #fff;
+}
+.farmEnded img {
+  filter: grayscale(100%);
+}
+.farmEnded .bg-blue-10.text-white {
+  color: #fff;
+}
+.farmEnded .active .text-navHighLightText {
+  color: #fff;
+}
+.farmEnded .active img {
+  filter: initial;
+}
+
+.farmDetailsEnded {
+  /* background-color: #0c171f;
+  opacity: 0.6; */
+}
+.farmDetailsEnded .border-gradientFromHover {
+  border-color: #73818b;
+}
+.farmDetailsEnded .border-gradientFrom {
+  border-color: #73818b;
+}
+
+.farmDetailsEnded .text-white {
+  color: #73818b;
+}
+.farmDetailsEnded .dclIcon.text-white {
+  color: #fff;
+}
+.farmDetailsEnded img {
+  filter: grayscale(100%);
+}
+.farmDetailsEnded .bg-blue-10.text-white {
+  color: #fff;
+}
+.farmDetailsEnded .active .text-navHighLightText {
+  color: #fff;
+}
+.farmDetailsEnded .active img {
+  filter: initial;
+}
+
+.gradient_text {
+  background: linear-gradient(90deg, #ffffff 0%, #91a2ae 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 600px) {
+  .gradient_text {
+    height: 58px;
+    background: none;
+    color: #ffffff;
+    border-bottom: 2px #ffffff solid;
+  }
+}

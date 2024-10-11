@@ -1,0 +1,489 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("./aggregationClass.css");
+@import url("./bridge.css");
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("../../public/SpaceGrotesk-Light.ttf");
+}
+@font-face {
+  font-family: "SpaceGroteskBold";
+  src: url("../../public/SpaceGrotesk-Bold.ttf");
+}
+@font-face {
+  font-family: "SpaceGroteskRegular";
+  src: url("../../public/SpaceGrotesk-Regular.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --background-color: #030f16;
+  --toastify-color-progress-light: transparent !important;
+}
+
+body {
+  font-family: "SpaceGroteskRegular";
+  color-scheme: light !important;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* font */
+.paceGrotesk-Bold {
+  font-family: "SpaceGroteskBold";
+}
+
+/* input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  background: rgba(33, 43, 53, 0.1);
+  background: rgba(33, 43, 53, 0.1);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2d3a45;
+  border-radius: 2px;
+}
+
+.classAddLiqThumb::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 1px;
+}
+
+input {
+  margin: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border-width: 0;
+}
+
+input:focus {
+  outline: none;
+  border-width: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* custom-tooltip */
+.react-tooltip.custom-tooltip {
+  /* width: 148px;  The width cannot be set dead*/
+  border-radius: 5px;
+  border: 1px solid #414b57;
+  background-color: #2a3643;
+  font-size: 12px;
+  z-index: 99;
+  padding: 6px 12px;
+  box-shadow: none;
+  opacity: 1;
+  transform: translateY(-6px);
+}
+
+input[type="range"].lock-bar {
+  display: block;
+  -webkit-appearance: none;
+  background: #717e8d;
+  height: 8px;
+  border-radius: 2px;
+  margin: 0 auto;
+  outline: none;
+  background-image: linear-gradient(to right, #9dfd01, #5f9900);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+}
+input[type="range"].lock-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #f7fbff;
+  width: 14px;
+  height: 12px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotateInfinite {
+  animation: spin 1s linear infinite;
+  transform-origin: center;
+}
+
+/* slider start*/
+.multi-slider {
+  height: 22px;
+}
+
+.multi-slider .thumb {
+  width: 20px;
+  height: 12px;
+  cursor: pointer;
+  /* border: 1px solid #1d2932; */
+  outline: none;
+  background: white;
+  top: 4px;
+  border-radius: 4px;
+}
+.multi-slider.disabled .thumb-0,
+.multi-slider.disabled .track-1 {
+  visibility: hidden;
+}
+.multi-slider .track-0 {
+  height: 8px;
+  top: 6px;
+  background: linear-gradient(to right, #9dfd01, #5f9900);
+  border-radius: 2px;
+  /* display: block;
+  -webkit-appearance: none;
+  background: #717e8d;
+  height: 8px;
+  border-radius: 2px;
+  margin: 0 auto;
+  outline: none;
+  background-image: linear-gradient(to right, #9dfd01, #5f9900);
+  background-size: 0% 100%;
+  background-repeat: no-repeat; */
+}
+.multi-slider .track-1 {
+  height: 8px;
+  top: 6px;
+  background-color: #717e8d;
+  border-radius: 2px;
+}
+
+.multi-slider-double {
+  height: 22px;
+}
+.multi-slider-double .thumb {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  border: 1px solid #1d2932;
+  outline: none;
+  background: #9eff00;
+}
+
+.multi-slider-double .track-0 {
+  height: 10px;
+  top: 6px;
+  background-color: #121e27;
+}
+.multi-slider-double .track-1 {
+  height: 10px;
+  top: 6px;
+  background-color: #9eff00;
+}
+.multi-slider-double .track-2 {
+  height: 10px;
+  top: 6px;
+  background-color: black;
+}
+/* slider end*/
+.loading-dots {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.loading-dots::after {
+  content: "...";
+  animation: fadeInOut 1s infinite;
+}
+
+.farmTextGradient {
+  background: -webkit-linear-gradient(left, #ffd278, #ff9900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* wallet select modal ui start */
+.nws-modal-wrapper {
+  z-index: 9999 !important;
+}
+.nws-modal-wrapper .nws-modal-overlay {
+  backdrop-filter: blur(20px);
+}
+.nws-modal-wrapper .nws-modal {
+  border: 1px solid #414d55;
+}
+
+:root {
+  --wallet-selector-backdrop-bg: rgba(0, 0, 0, 0.5);
+  --wallet-selector-content-bg: #313d46;
+  --wallet-selector-heading-color: #ffffff;
+  --wallet-selector-text-color: #fff;
+  --gradient-dark-icon: #42525c;
+  --wallet-selector-close-button-bg-color: transparent;
+  --wallet-selector-sidebar-border-color: #414d55;
+  --wallet-selector-selected-wallet-bg: #42525c;
+  --wallet-selector-mobile-bottom-section: #42525c;
+  --sidebar-border-color: #42525c;
+  --rt-opacity: 1 !important;
+  --wcm-z-index: 10000 !important;
+  --w3m-z-index: 10000 !important;
+}
+.nws-modal-wrapper
+  .nws-modal
+  .modal-right
+  .wallet-what
+  .content-side
+  .nws-modal-wrapper
+  .nws-modal
+  .modal-right
+  .wallet-what
+  .content-side
+  p {
+  font-size: 14px;
+  color: #7e8a93;
+}
+.nws-modal-wrapper .nws-modal .modal-right .connecting-message {
+  color: #fff;
+}
+.nws-modal-wrapper
+  .nws-modal
+  .nws-modal-body
+  .alert-message
+  .connection
+  .error-wrapper
+  p {
+  color: #fff;
+}
+
+#near-wallet-selector-modal {
+  --gradient-dark-icon: #42525c;
+  --what-wallet-icon-color: rgba(255, 255, 255, 0.65);
+  --get-wallet-option-bg-color-hover: rgba(255, 255, 255, 0.9);
+}
+
+.nws-modal-wrapper .nws-modal .modal-left::-webkit-scrollbar,
+options-list::-webkit-scrollbar {
+  width: 0px;
+  border-radius: 2px;
+}
+
+.nws-modal-wrapper .nws-modal .modal-left::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 2px;
+}
+
+.wallet-options-wrapper .options-list::-webkit-scrollbar-thumb {
+  background: #626486;
+  border-radius: 2px;
+}
+
+.nws-modal-wrapper .nws-modal .nws-modal-body button.middleButton {
+  color: #000;
+  background-color: #d2ff3a;
+  border: none;
+}
+
+.nws-modal-wrapper .nws-modal .nws-modal-body button.middleButton:hover {
+  opacity: 0.8;
+}
+
+.nws-modal-wrapper .nws-modal .nws-modal-header .close-button svg {
+  fill: #fff;
+}
+
+.nws-modal-wrapper
+  .nws-modal
+  .wallet-options-wrapper
+  .options-list
+  .single-wallet.sidebar:hover {
+  background-color: #42525c;
+}
+
+.nws-modal-wrapper .nws-modal .connecting-details span {
+  color: #fff;
+}
+.nws-modal-wrapper .nws-modal .nws-modal-body button.middleButton {
+  background: #9eff00 !important;
+  color: #000 !important;
+}
+.options-list-section-header {
+  font-size: 14px;
+  color: #7e8a93;
+}
+#webpack-dev-server-client-overlay {
+  display: none;
+}
+
+.nws-modal-wrapper .modal-overlay {
+  /* background: var(--wallet-selector-backdrop-bg, var(--backdrop-bg)); */
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.nws-modal-wrapper .modal {
+  /* background: var(--wallet-selector-content-bg, var(--content-bg)); */
+  /* width: 470px; */
+  max-width: 470px;
+  height: auto;
+  max-height: 90vh;
+  border-radius: 16px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  background-color: var(--wallet-selector-content-bg, var(--content-bg));
+  padding-bottom: 24px;
+  padding-top: 30px;
+  padding-left: 28px;
+  padding-right: 28px;
+  font-size: 16px;
+  line-height: 1.6;
+  border: solid 1px transparent;
+  background-image: linear-gradient(var(--content-bg), var(--content-bg)),
+    linear-gradient(
+      135deg,
+      rgba(0, 255, 209, 0.2) 0%,
+      rgba(147, 62, 255, 0.2) 100%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.nws-modal-wrapper .modal {
+  box-sizing: content-box;
+}
+.nws-modal-wrapper .modal:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  filter: blur(30px);
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  border-radius: inherit;
+}
+
+.nws-modal-wrapper .modal::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  border-radius: inherit;
+}
+.nws-form-control .account label {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.nws-form-control .account br {
+  display: none;
+}
+.nws-modal-wrapper
+  .nws-modal
+  .choose-ledger-account-form-wrapper
+  .nws-form-control
+  .account {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-bottom: 1px solid #42525c;
+}
+.nws-modal-wrapper
+  .nws-modal
+  .choose-ledger-account-form-wrapper
+  .nws-form-control
+  .account
+  input[type="checkbox"] {
+  transform: scale(1.2);
+}
+.nws-modal-wrapper .nws-modal .overview-wrapper .account {
+  border-bottom: 1px solid #42525c;
+}
+.nws-modal-wrapper .nws-modal .overview-wrapper .account span {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.nws-modal-wrapper .nws-modal .modal-right::-webkit-scrollbar {
+  width: 2px;
+}
+.nws-modal-wrapper
+  .nws-modal
+  .derivation-path-wrapper
+  .enter-derivation-path
+  .ledger-description
+  .specify-path {
+  color: white !important;
+}
+.connecting-wrapper .content .connecting-details span {
+  color: white !important;
+}
+.nws-modal-wrapper .nws-modal .modal-right .wallet-what .icon-side {
+  background: transparent !important;
+}
+.nws-modal-wrapper .nws-modal .modal-left .modal-left-title {
+  background: rgba(49, 61, 70) !important;
+}
+/* wallet select modal ui end */
+
+.text-with-custom-underline {
+  position: relative;
+  display: inline;
+}
+@media (min-width: 300px) and (max-width: 1024px) {
+  .text-with-custom-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    height: 2px;
+    background-color: white;
+    width: 100%;
+  }
+}
+
+*:focus {
+  outline: none;
+}

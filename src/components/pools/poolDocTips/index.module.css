@@ -1,0 +1,10 @@
+.dclTips {
+  @apply frcc w-full lg:h-13 xsm:min-h-13 bg-dark-45 mb-2;
+}
+.dclTips > div {
+  @apply lg:w-[1104px] xsm:w-full text-gray-60 text-sm lg:flex items-center;
+}
+
+.learnMore {
+  @apply underline cursor-pointer hover:opacity-80;
+}

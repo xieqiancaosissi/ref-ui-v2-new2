@@ -1,0 +1,6 @@
+.controlButton {
+  @apply cursor-pointer text-gray-10 hover:text-lightWhite-10;
+}
+.swapControlButton {
+  @apply flex items-center justify-center w-7 h-7 rounded cursor-pointer border border-gray-90 text-gray-50 hover:text-white;
+}

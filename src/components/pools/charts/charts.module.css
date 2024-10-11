@@ -1,0 +1,30 @@
+.chartsTitle {
+  @apply flex justify-between items-center;
+}
+.chartsTitle > div:first-child {
+  @apply flex-col items-center;
+}
+.chartsTitle > div:last-child {
+  @apply lg:flex lg:items-center  xsm:fccc;
+}
+.chartsContent {
+  @apply flex items-start lg:h-43 overflow-hidden  xsm:bg-transparent xs:h-50 sm:h-95 md:h-140;
+}
+@media (min-width: 300px) and (max-width: 820px) {
+  .chartsContent {
+    @apply frcc;
+    width: 90vw;
+  }
+}
+@media (min-width: 821px) and (max-width: 1024px) {
+  .chartsContent {
+    @apply frcc h-260;
+    width: 90vw;
+  }
+}
+
+@media (min-width: 1025px) {
+  .chartsContent {
+    width: 32.8125rem;
+  }
+}

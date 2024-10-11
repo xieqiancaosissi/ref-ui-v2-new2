@@ -1,0 +1,77 @@
+.tab {
+  @apply w-13 h-6 flex items-center justify-center ml-2 rounded text-sm;
+}
+
+/* hide low tvl checkbox styles */
+.customCheckbox {
+  @apply flex items-center justify-end cursor-pointer;
+}
+
+.customCheckbox input {
+  display: none;
+}
+
+.checkmark {
+  @apply inline-block bg-transparent relative rounded-sm mr-1 border border-gray-60;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+}
+
+.customCheckbox input:checked ~ .checkmark {
+  background-color: rgba(158, 254, 1, 1);
+  @apply border-none;
+}
+
+.checkmark::after {
+  content: "";
+  display: none;
+  @apply absolute;
+}
+
+.customCheckbox input:checked ~ .checkmark::after {
+  @apply block;
+  left: 4px;
+  top: 1px;
+  width: 6px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkPlaceholder {
+  @apply select-none font-normal lg:text-sm xsm:text-xs;
+}
+
+/* pool head */
+.headDiv {
+  @apply lg:frc text-gray-60 text-sm justify-between px-3 mt-8 mb-2 cursor-default xsm:w-full lg:w-[1104px] xsm:hidden;
+}
+@media (min-width: 300px) and (max-width: 1024px) {
+  /* .headDiv > div:first-child {
+  @apply w-109;
+} */
+
+  .headDiv > div:last-child {
+    @apply frc flex-1 justify-around;
+  }
+  /* 
+.headDiv > div:last-child > div {
+  @apply min-w-40 frcc;
+} */
+}
+
+@media (min-width: 1025px) {
+  .headDiv > div:first-child {
+    @apply w-109;
+  }
+
+  .headDiv > div:last-child {
+    @apply frc flex-1 justify-around;
+  }
+
+  .headDiv > div:last-child > div {
+    @apply min-w-40 frcc;
+  }
+}

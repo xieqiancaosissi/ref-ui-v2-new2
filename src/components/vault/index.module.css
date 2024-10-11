@@ -1,0 +1,7 @@
+.filterPoolType {
+  @apply text-xs cursor-pointer border border-gray-100 rounded  h-9 frcc vlg:w-[583px] vxsm:hidden;
+}
+
+.filterPoolTypeMobile {
+  @apply text-xs cursor-pointer border border-gray-100 rounded  h-9 frcc vxsm:w-full  vlg:hidden;
+}

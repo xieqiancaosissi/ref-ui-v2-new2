@@ -1,0 +1,25 @@
+.filterPoolType {
+  @apply text-xs cursor-pointer border border-gray-100 rounded lg:w-59 xsm:w-full  h-9 frcc;
+}
+
+.tagActive {
+  @apply min-w-5 h-3 lg:frcc text-black bg-primaryGreen font-bold absolute xsm:hidden;
+  font-size: 10px;
+  border-radius: 9px 10px 10px 0;
+  top: 6px;
+  right: 13px;
+}
+
+.tagDisable {
+  @apply min-w-5 h-3 lg:frcc text-white bg-gray-100 font-bold absolute xsm:hidden;
+  font-size: 10px;
+  border-radius: 9px 10px 10px 0;
+  top: 6px;
+  right: 13px;
+}
+.claimRow {
+  display: none;
+}
+.dclPoolRowContainer:hover .claimRow {
+  display: block;
+}

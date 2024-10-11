@@ -1,0 +1,11 @@
+.filterSeacrhInputContainer {
+  @apply border border-gray-90 w-14 h-7 frc p-1 rounded text-white bg-dark-60 ml-2;
+}
+
+.filterSearchInput {
+  @apply border-none w-7 bg-dark-60 outline-none caret-white mr-1 ml-1 text-white text-sm;
+}
+
+.commonStyle {
+  @apply rounded border border-gray-90 bg-dark-60 cursor-default font-normal;
+}

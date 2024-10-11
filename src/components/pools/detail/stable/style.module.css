@@ -1,0 +1,87 @@
+.tokenImgContainer {
+  @apply flex items-center xsm:min-w-24;
+}
+
+.tokenImgContainer img {
+  width: 26px;
+  height: 26px;
+  @apply rounded-full border border-dark-40;
+}
+
+.tokenImgContainer > :nth-child(2) {
+  transform: translateX(-4px);
+}
+.tokenImgContainer > :nth-child(3) {
+  transform: translateX(-8px);
+}
+.tokenImgContainer > :nth-child(4) {
+  transform: translateX(-12px);
+}
+.chartsFilterPoolType {
+  @apply text-xs cursor-pointer border border-gray-100 rounded w-38 h-9 frcc relative;
+  z-index: 10;
+  top: 36px;
+}
+
+.chartsContent {
+  width: 100%;
+  @apply flex items-start h-140 overflow-hidden;
+}
+
+.triangleDown {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #566069;
+}
+.triangleWrapper:hover .triangleDown {
+  border-top: 5px solid #fff;
+}
+
+.triangleUp {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 5px solid #fff;
+}
+
+/* my lockingdetails */
+.hoverTooltipContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.hoverTooltipOverlocking {
+  position: absolute;
+  z-index: 1000;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-25%);
+  @apply absolute border  p-3 rounded-lg text-sm border-gray-140  text-white w-37 font-normal;
+  border-color: #414b57;
+  background-color: #2a3643;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.loadingDots {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.loadingDots::after {
+  content: "...";
+  color: #73818b;
+  animation: fadeInOut 1s infinite;
+}

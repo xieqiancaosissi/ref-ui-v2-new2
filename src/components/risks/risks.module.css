@@ -1,0 +1,46 @@
+.riskBg {
+  background: url("https://img.ref.finance/images/risksBgColor.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: -50px;
+  margin-bottom: 80px;
+}
+
+.exButton {
+  border-radius: 6px;
+  height: 40px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(188, 201, 210, 0.3);
+  font-size: 14px;
+  color: #bcc9d2;
+  cursor: pointer;
+  gap: 10px;
+  white-space: nowrap;
+}
+.exButton:hover {
+  color: #ffffff;
+}
+.wrapBox {
+  display: flex;
+  gap: 18px;
+  border-radius: 8px;
+  padding: 30px 24px;
+  background-color: rgba(36, 57, 57, 0.4);
+  margin-top: 24px;
+}
+.wrapBoxTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.wrapBoxContent {
+  font-size: 14px;
+  color: #7e8a93;
+}
+.wrapBox svg {
+  flex-shrink: 0;
+}

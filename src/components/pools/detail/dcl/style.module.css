@@ -1,0 +1,80 @@
+.tokenImgContainer {
+  @apply flex items-center;
+}
+
+.tokenImgContainer img {
+  width: 26px;
+  height: 26px;
+  @apply rounded-full border border-dark-40;
+}
+
+.tokenImgContainer > :last-child {
+  transform: translateX(-4px);
+}
+
+.chartsFilterPoolType {
+  @apply text-xs cursor-pointer border border-gray-100 rounded lg:w-56 xsm:w-full h-9 frcc relative mb-16 lg:top-0 xsm:top-9;
+  z-index: 10;
+}
+
+.chartsContent {
+  @apply flex items-start lg:h-140 lg:min-h-80 lg:min-w-[732px] xsm:w-full xsm:mt-24 xsm:mb-4;
+}
+
+.triangleDown {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #566069;
+}
+.triangleWrapper:hover .triangleDown {
+  border-top: 5px solid #fff;
+}
+
+.triangleUp {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 5px solid #fff;
+}
+
+/* my lockingdetails */
+.hoverTooltipContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.hoverTooltipOverlocking {
+  position: absolute;
+  z-index: 1000;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-25%);
+  @apply absolute border  p-3 rounded-lg text-sm border-gray-140  text-white w-37 font-normal;
+  border-color: #414b57;
+  background-color: #2a3643;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.loadingDots {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.loadingDots::after {
+  content: "...";
+  color: #73818b;
+  animation: fadeInOut 1s infinite;
+}

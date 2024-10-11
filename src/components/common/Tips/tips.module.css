@@ -1,0 +1,35 @@
+.tooltip {
+  @apply absolute border  px-1 py-1 rounded-lg text-xs  bottom-6 text-gray-10;
+  left: 50%;
+  display: none;
+  transform: translateX(-50%);
+  border-color: #2d343d;
+  background-color: #101922;
+}
+
+.tooltipMobileRight {
+  @apply absolute border  px-1 py-1 rounded-lg text-xs  bottom-6 text-gray-10;
+  left: 0%;
+  display: none;
+  transform: translateX(-50%);
+  border-color: #2d343d;
+  background-color: #101922;
+}
+
+.tooltipForCreatePool {
+  @apply absolute border  px-1 py-1 rounded-lg text-xs  bottom-6 text-gray-10;
+  left: 50%;
+  display: none;
+  transform: translateX(-30%);
+  border-color: #2d343d;
+  background-color: #101922;
+}
+.iconContainer:hover {
+  cursor: pointer;
+  @apply w-full h-4;
+}
+.iconContainer:hover + .tooltip,
+.iconContainer:hover + .tooltipMobileRight,
+.iconContainer:hover + .tooltipForCreatePool {
+  @apply block;
+}

@@ -1,0 +1,123 @@
+.poolContainer {
+  @apply flex items-center lg:w-[1104px] xsm:w-full min-h-18 mt-3 rounded-lg text-white text-sm font-medium  justify-between flex-wrap;
+}
+.notfarm {
+  background: rgba(33, 43, 53, 0.3);
+}
+.notfarm:hover {
+  @apply bg-transparent;
+}
+
+@media (min-width: 1025px) {
+  .isfarm {
+    background: radial-gradient(
+      24.64% 177.05% at 11.82% 0%,
+      rgba(250, 255, 0, 0.21) 0%,
+      rgba(33, 43, 53, 0.09) 80.5%
+    );
+  }
+}
+
+@media (max-width: 1024px) {
+  .isfarm {
+    background: radial-gradient(
+      60% 107.05% at 86.82% 0%,
+      rgba(250, 255, 0, 0.2) 0%,
+      rgba(18, 29, 38, 0.2) 80.5%
+    );
+  }
+}
+
+.poolContainer > div:first-child {
+  @apply lg:w-109 shrink-0 ml-5;
+}
+
+.poolContainer:hover .farmContainer {
+  @apply lg:block xsm:hidden;
+}
+
+.poolContainer:hover {
+  @apply pb-3;
+}
+.poolLast {
+  @apply lg:frc  lg:mr-1;
+}
+
+.poolLast > div {
+  @apply lg:w-40 xsm:w-1/4 flex flex-col justify-start shrink-0;
+}
+
+.poolLastForMobile {
+  @apply xsm:flex xsm:flex-col xsm:justify-between w-full p-4;
+}
+
+.poolLastForMobile > div {
+  @apply flex items-center justify-between w-full my-2;
+}
+
+.tokenImgContainer {
+  @apply flex items-center max-w-13 flex-wrap justify-center;
+}
+
+.tokenImgContainer img {
+  width: 26px;
+  height: 26px;
+  @apply rounded-full border border-dark-40 bg-dark-40;
+}
+
+.tokenImgContainer > :nth-child(2) {
+  transform: translateX(-8px);
+}
+
+.tokenImgContainer > :nth-child(3) {
+  transform: translateY(-8px);
+}
+
+.tokenImgContainer > :nth-child(4) {
+  transform: translate(-8px, -8px);
+}
+
+.symbol {
+  @apply text-base text-white font-medium lg:pr-2 flex lg:max-w-41 xsm:justify-end;
+}
+
+.tagPublicStyle {
+  @apply frcc text-xs italic w-13 h-5 rounded-xl;
+}
+
+.tokenCharts {
+  @apply flex flex-wrap  lg:w-44 xsm:w-full xsm:justify-end text-gray-10 text-xs !important;
+}
+.tokenCharts > div {
+  @apply xsm:w-19 !important;
+}
+.tokenCharts > div:not(:last-child) {
+  @apply lg:mr-3 xsm:mr-1;
+}
+
+.stableCharts {
+  @apply xsm:hidden items-end !important;
+}
+
+/* farm style */
+.farmContainer {
+  @apply h-16 lg:w-[1104px] xsm:w-full frcc p-3 bg-transparent lg:hidden xsm:hidden;
+}
+
+.farmContainer > div:first-child {
+  @apply border border-gray-30 w-full h-13 rounded flex px-3 items-center;
+}
+
+.btnStyle {
+  @apply w-21 h-7 frcc text-sm font-bold rounded cursor-pointer mx-2 hover:opacity-80;
+}
+.lightBtn {
+  @apply border border-green-10 text-green-10;
+}
+.darkBtn {
+  @apply border border-gray-90 text-white;
+}
+
+.topStyle {
+  @apply frcc text-xs italic w-9 h-5 rounded-xl;
+}

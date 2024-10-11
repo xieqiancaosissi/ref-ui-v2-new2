@@ -1,0 +1,32 @@
+module.exports = {
+  extends: [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier",
+    "plugin:prettier/recommended",
+  ],
+  rules: {
+    "unused-imports/no-unused-imports": "off",
+    "simple-import-sort/imports": "off",
+    "simple-import-sort/exports": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "prettier/prettier": ["warn", { endOfLine: "auto" }],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/ban-ts-ignore": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "react/react-in-jsx-scope": "off",
+    "object-shorthand": ["error", "always"],
+    "dot-notation": "error",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/ban-types": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-inferrable-types": "off",
+    "react/no-unescaped-entities": "off",
+    "@typescript-eslint/no-duplicate-enum-values": "off",
+    "react/no-is-mounted": "off"
+  },
+};

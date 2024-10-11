@@ -1,0 +1,244 @@
+:root {
+  --bridge-primary-color: #9eff00;
+  --bridge-primary-color-hover: #5f9900;
+  --bridge-default-color: #7e8a93;
+  --bridge-default-bg-color: #1b242c;
+  --bridge-border-color: #26323c;
+  --bridge-danger-color: #ff4b76;
+  --toastify-color-success: #9eff00;
+  --toastify-color-dark: #213441;
+}
+
+.svg-icon-wrapper {
+  @apply inline-flex fill-current items-center justify-center;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  color: inherit;
+}
+.svg-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.modal-overlay {
+  @apply fixed top-0 left-0 w-full h-full bg-black bg-opacity-80;
+  z-index: 1000;
+}
+
+/** reset toast style */
+.Toastify__toast-body > div:first-child {
+  width: 20px;
+  height: auto;
+}
+
+.text-primary {
+  color: var(--bridge-primary-color) !important;
+}
+.text-danger {
+  color: var(--bridge-danger-color) !important;
+}
+.bg-primary {
+  background-color: var(--bridge-primary-color) !important;
+}
+
+.bridge-page {
+  color: var(--bridge-default-color);
+  @apply h-full flex-1 text-sm;
+}
+
+.bridge-primary-label {
+  background: linear-gradient(90deg, #ffffff 0%, #91a2ae 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bridge-entry-container {
+  @apply m-auto mt-20 xs:mt-0;
+  width: 428px;
+  max-width: 90vw;
+}
+.bridge-history-container {
+  @apply m-auto mt-20 px-4 box-content xs:mt-2;
+  max-width: 900px;
+}
+.bridge-plane {
+  @apply p-4 border rounded-2xl border-solid flex-col gap-4;
+  border-color: var(--bridge-border-color);
+  background: var(--bridge-default-bg-color);
+}
+.bridge-modal {
+  @apply w-full p-4 border rounded-2xl border-solid flex-col gap-4 shadow-2xl text-sm;
+  border-color: var(--bridge-border-color);
+  background: var(--bridge-default-bg-color);
+  color: var(--bridge-default-color);
+  max-width: 90vw;
+}
+
+.bridge-input {
+  @apply flex items-center text-white p-2 pr-8 rounded-md border border-solid leading-5;
+  background: rgba(20, 28, 34, 1);
+}
+.bridge-input.small {
+  @apply px-2 py-1;
+}
+.bridge-input:hover {
+  @apply transition-colors;
+  border-color: var(--bridge-default-color);
+}
+.bridge-input:focus,
+.bridge-input.is-focus {
+  @apply transition-colors;
+  border-width: 1px;
+  border-color: var(--bridge-primary-color);
+}
+.bridge-input.is-warning {
+  @apply border-warn;
+}
+.bridge-input.is-error {
+  border-color: var(--bridge-danger-color);
+}
+
+.bridge-checkbox {
+  @apply w-4 h-4 appearance-none text-green-600  rounded focus:ring-green-600 ring-offset-gray-800 focus:ring-2 bg-gray-900 border border-gray-700;
+}
+.bridge-checkbox:checked {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 12'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M1 5.917 5.724 10.5 15 1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 0.55em 0.55em;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  background-color: currentColor;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 0.55em 0.55em;
+  border-color: transparent;
+}
+
+.bridge-btn {
+  @apply inline-flex items-center justify-center text-sm text-white border border-solid rounded-md;
+  background: rgba(126, 138, 147, 0.1);
+  color: var(--bridge-default-color);
+  border-color: var(--bridge-border-color);
+}
+.bridge-btn.is-plain {
+  @apply bg-transparent;
+}
+.bridge-btn:not(.is-disabled):hover,
+.bridge-btn.is-plain:not(.is-disabled):hover,
+.bridge-btn.is-text:not(.is-disabled):hover {
+  @apply bg-primary text-white transition-colors;
+  background: rgba(126, 138, 147, 0.3);
+}
+
+.bridge-btn-size-large {
+  @apply text-base px-3 py-2 rounded-md;
+}
+.bridge-btn-size-default {
+  @apply text-sm px-2.5 py-1.5 rounded-sm;
+}
+.bridge-btn-size-small {
+  @apply text-xs p-1 rounded-sm;
+}
+
+.bridge-btn-primary {
+  @apply text-black;
+  background: linear-gradient(
+    90deg,
+    var(--bridge-primary-color) 0%,
+    var(--bridge-primary-color-hover) 100%
+  );
+  border-color: var(--bridge-primary-color-hover);
+}
+.bridge-btn-primary:not(.is-disabled):hover {
+  @apply text-black transition-all;
+  background: linear-gradient(
+    90deg,
+    var(--bridge-primary-color-hover) 0%,
+    var(--bridge-primary-color-hover) 100%
+  );
+}
+
+.bridge-btn-primary:disabled,
+.bridge-btn-primary.is-disabled {
+  @apply opacity-60 cursor-not-allowed;
+}
+
+.bridge-btn-info {
+  @apply bg-gray-400 text-white;
+}
+.bridge-btn.is-text {
+  padding: 0;
+  background: none !important;
+  border: none;
+}
+.bridge-btn-primary.is-text {
+  color: var(--bridge-primary-color);
+}
+.bridge-btn-primary.is-text:not(.is-disabled):hover {
+  color: var(--bridge-primary-color-hover);
+}
+
+.bridge-btn.is-rounded {
+  @apply rounded-full;
+}
+
+.bridge-table {
+  @apply w-full;
+  border-collapse: collapse;
+}
+.bridge-table tr:not(:last-child) {
+  @apply border-b;
+  border-color: var(--bridge-border-color);
+}
+
+.bridge-table th {
+  @apply text-left text-sm p-2;
+}
+.bridge-table td {
+  @apply text-left text-sm px-2 py-3 text-white min-w-24;
+}
+
+.bridge-input-token {
+  @apply flex-col border rounded-md border-solid p-3;
+}
+
+.bridge-status-process {
+  @apply relative px-10;
+}
+.bridge-status-process::before {
+  @apply absolute left-1 top-1/2 w-9 h-1;
+  content: "";
+  background: url("./../components/bridge/assets/line.svg") no-repeat center;
+}
+.bridge-status-process::after {
+  @apply absolute right-1 top-1/2 w-9 h-1;
+  content: "";
+  background: url("./../components/bridge/assets/line.svg") no-repeat center;
+}
+
+.animate-waiting {
+  animation: animate-waiting 3s ease-in-out infinite;
+}
+@keyframes animate-waiting {
+  0% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.animate-fadeIn {
+  opacity: 0;
+  animation: animation-fadeIn 0.3s forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes animation-fadeIn {
+  to {
+    opacity: 1;
+  }
+}

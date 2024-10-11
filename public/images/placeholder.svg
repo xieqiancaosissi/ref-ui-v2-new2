@@ -1,0 +1,7 @@
+<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="14" cy="14" r="13" fill="#91A2AE" fill-opacity="0.3"/>
+<mask id="mask0_3894_43" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="28">
+<circle cx="14" cy="14" r="13" fill="#91A2AE"/>
+<circle cx="14" cy="14" r="13.5" stroke="#AABAC7" stroke-opacity="0.5"/>
+</mask>
+</svg>

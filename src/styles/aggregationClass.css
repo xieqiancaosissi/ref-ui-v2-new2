@@ -1,0 +1,50 @@
+.flexBetween {
+  @apply flex items-center justify-between;
+}
+.thinGrayscrollBar::-webkit-scrollbar-thumb {
+  background: #566069;
+  border-radius: 2px;
+}
+.thinGrayscrollBar::-webkit-scrollbar {
+  width: 4px;
+  height: 0;
+  border-radius: 2px;
+}
+
+.thinGrayscrollBar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  background: transparent;
+  border-radius: 2px;
+}
+
+.thinGrayscrollBar::-webkit-scrollbar-thumb {
+  background: #566069;
+  border-radius: 2px;
+}
+
+.thinDarkscrollBar::-webkit-scrollbar-thumb {
+  background: #2d3a45;
+  border-radius: 2px;
+}
+.thinDarkscrollBar::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 2px;
+}
+
+.thinDarkscrollBar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  background: transparent;
+  border-radius: 2px;
+}
+
+.thinDarkscrollBar::-webkit-scrollbar-thumb {
+  background: #2d3a45;
+  border-radius: 2px;
+}
+
+.transak_modal .transak_modal-content .transak_close:hover {
+  color: #6a7279;
+}
+.recharts-wrapper svg {
+  overflow: inherit !important;
+}
